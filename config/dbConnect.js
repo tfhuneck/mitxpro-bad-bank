@@ -5,7 +5,10 @@ const connect = async () => {
         const options = {
             useNewUrlParser: true,
         };
-        const connection = await mongoose.connect('mongodb://mongo:27017/myapp', options);
+        const connection = await mongoose.connect(process.env.DATABASE_URI, {
+                useUnifiedTopology: true,
+                useNewUrlParser: true
+            });
         if (connection)
         console.log('🌱🌱🌱MongoDB Config connected🌱🌱🌱');
 	} catch (err) {
