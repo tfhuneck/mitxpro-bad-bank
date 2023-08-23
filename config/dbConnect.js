@@ -5,9 +5,9 @@ const connect = async () => {
         const options = {
             useNewUrlParser: true,
         };
-        const connection = await mongoose.connect('mongodb://localhost:27017/myapp', options);
+        const connection = await mongoose.connect('mongodb://mongo:27017/myapp', options);
         if (connection)
-        console.log('🌱🌱🌱MongoDB connected in Controller🌱🌱🌱');
+        console.log('🌱🌱🌱MongoDB Config connected🌱🌱🌱');
 	} catch (err) {
         console.log('Error while connecting database');
         console.log(err);

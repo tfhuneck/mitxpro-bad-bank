@@ -7,7 +7,7 @@ const mongoose      = require('mongoose');
 const connectDB     = require('./config/dbConnect');
 const User          = require('./model/user');
 const bodyParser    = require('body-parser');
-
+const port          = process.env.PORT || 8080;
 
 // Connect to MongoDB
 connectDB();
@@ -56,7 +56,6 @@ app.use('/withdraw', require('./routes/withdrawRoute.js'));
     // });
 
 
-var port = 8080;
 app.listen(port, ()=> {
     console.log('🔥🔥🔥🔥🔥Running on port 8080! - http://localhost:8080🔥🔥🔥🔥🔥');
     mongoose.connection.once('open', () => console.log('🌱🌱🌱🌱🌱MongoDB connected🌱🌱🌱🌱🌱'));
