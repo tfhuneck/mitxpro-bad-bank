@@ -1,12 +1,7 @@
 import { useState, useEffect, useContext } from "react";
-import { Link } from 'react-router-dom';
 import Card from "./DashElement";
-import Button from 'react-bootstrap/Button';
 import { LoginContext } from '../App';
 import { UserContext } from '../App';
-import axios from "axios";
-import uniqid from 'uniqid';
-const serverUrl = 'http://localhost:8080'
 
 function Balance(){
     const [loggedIn, setLoggedIn]       = useContext(LoginContext);

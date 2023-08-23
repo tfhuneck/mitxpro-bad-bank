@@ -13,7 +13,7 @@ function Register() {
     const user                      = useContext(UserContext);
     const auth                      = getAuth(firebaseApp);
     const navigate                  = useNavigate();
-    const serverUrl                 = 'http://localhost:8080'
+    const serverUrl                 = `${process.env.REACT_APP_production_url}`
 
     useEffect(()=> {
         if(user && loggedIn){

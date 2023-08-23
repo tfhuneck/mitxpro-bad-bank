@@ -15,11 +15,11 @@ import firebaseApp from './firebase.js';
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import axios from 'axios';
 
-const serverUrl             = 'http://localhost:8080'
 export const LoginContext   = createContext();
 export const UserContext    = createContext();
 
 function App() {
+  const serverUrl                 = `${process.env.REACT_APP_production_url}`
   const auth                      = getAuth(firebaseApp);
   const [loggedIn, setLoggedIn]   = useState(false);
   const [ uid, setUid  ]          = useState();
@@ -41,7 +41,7 @@ function App() {
     if(loggedIn === true){
       const getUser = async () => {
         await axios.post(serverUrl + '/user',{
-          'userid': uid
+           'userid': uid
         })
           .then((res) => {
            const userData = res.data

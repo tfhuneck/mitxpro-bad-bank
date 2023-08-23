@@ -6,10 +6,10 @@ import { LoginContext } from '../App';
 import { UserContext } from '../App';
 import axios from "axios";
 import uniqid from 'uniqid';
-const serverUrl = 'http://localhost:8080'
 
 
 function Withdraw(){
+  const serverUrl                     = `${process.env.REACT_APP_production_url}`
   const [loggedIn, setLoggedIn]       = useContext(LoginContext);
   const user                          = useContext(UserContext);
   const [depo, SetDepo]               = useState('');
