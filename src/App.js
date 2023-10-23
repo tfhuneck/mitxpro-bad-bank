@@ -71,7 +71,6 @@ function App() {
               <Routes>
                 <Route path='/' index element={<Home/>}/>
                 <Route path='/balance' index element={<Balance/>}/>
-                <Route path='/balance' index element={<Balance/>}/>
                 <Route path='/deposit' index element={<Deposit/>}/>
                 <Route path='/withdraw' index element={<Withdraw/>}/>
                 <Route path='/userdata' index element={<UserData/>}/>

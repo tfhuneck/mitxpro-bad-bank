@@ -1,9 +1,7 @@
 const admin   = require('../admin.js');
-
 // Verify token via admin.js using Firebase service 
 async function verifyToken(req, res, next) {
     const token = req.headers.authorization;
-
     if (token) {
         admin.auth().verifyIdToken(token)
             .then(decodedToken => {
@@ -17,5 +15,4 @@ async function verifyToken(req, res, next) {
         return res.status(401).send('No token found');
     }
 }
-
 module.exports = verifyToken;
