@@ -17,12 +17,7 @@ const createNewUser = async (req, res) => {
             'name': userData.name,
             'email': userData.email,
             'password': userData.password
-            // 'transactions': [{
-            //     'transactionid': 0,
-            //     'timestamp': 0,
-            //     'transactionamount': 0,
-            //     'balance': 0
-            // }]
+    
         });
         console.log(newUser + ' record created in DB');
 

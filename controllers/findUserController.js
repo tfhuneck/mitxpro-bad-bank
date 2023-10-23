@@ -1,7 +1,6 @@
 const User = require('../model/user');
 
 const getUser = async (req, res) => {
-
     try {
         const userId = req.body.userid;
         // console.log(userId);
@@ -13,8 +12,6 @@ const getUser = async (req, res) => {
     }
     
 }
-
-
 module.exports = {getUser};
 
 
